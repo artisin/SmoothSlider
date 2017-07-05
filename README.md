@@ -1,5 +1,9 @@
 # SmoothSlider → A Preact Carousel Slider
 
+[![npm](https://img.shields.io/npm/l/SmoothSlider.svg)](https://github.com/artisin/SmoothSlider/blob/master/LICENSE.txt)
+[![npm](https://img.shields.io/npm/v/SmoothSlider.svg)](https://www.npmjs.com/package/SmoothSlider)
+[![wercker status](https://app.wercker.com/status/a5cd2c460ebd46869b203308802dc50e/s/master "wercker status")](https://app.wercker.com/project/byKey/a5cd2c460ebd46869b203308802dc50e)
+[![David](https://img.shields.io/david/artisin/SmoothSlider.svg)](https://github.com/artisin/SmoothSlider/blob/master/package.json)
 
 <p align="center">
   <img src="https://media.giphy.com/media/3o7btW63p3L2au0g4E/giphy.gif" width="450"/>
