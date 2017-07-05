@@ -1,10 +1,17 @@
 # SmoothSlider → A Preact Carousel Slider
 
-Example: 
+
+<p align="center">
+  <img src="https://media.giphy.com/media/3o7btW63p3L2au0g4E/giphy.gif" width="450"/>
+</p>
+<p align="center">
+  <a href="https://artisin.github.io/SmoothSlider/">Online Demo</a>
+</p>
+
 
 ## Description
 
-A simply smooth carousel slider for Preact for when you need a small 3kB alternative to React. SmoothSlider also comes prepacked with ctr that makes configuring the CSS a trivially quick matter. I created SmoothSlider as an alternative to the many bloated Jquery and hackey Javascript sliders. It’s a perfect fit if you want a simple, small, and configurable slider in your primarily HTML or Preact project.
+A fully responsive and simply smooth carousel slider for Preact for when you need a small 3kB alternative to React. SmoothSlider also comes prepacked with ctr that makes configuring the CSS a trivially quick matter. I created SmoothSlider as an alternative to the many bloated Jquery and hackey Javascript sliders. It’s a perfect fit if you want a simple, small, and configurable slider in your primarily HTML or Preact project.
 
 ## Project Setup
 

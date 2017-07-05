@@ -13,13 +13,13 @@ const exmpleOutput  = path.resolve(__dirname, './example-build');
  */
 const base = {
   entry: {
-    index: path.resolve(__dirname, './example/index.js')
+    index: `${exampleDir}/index.js`
   },
   devtool: dev ? '#eval-source-map' : 'source-map',
   output: {
     path: exmpleOutput,
     filename: '[name].js',
-    publicPath: '/'
+    publicPath: './'
   },
   module: {
     loaders: [{
@@ -91,7 +91,8 @@ const base = {
     }),
     new HtmlWebpackPlugin({
       title: 'SmoothSlider',
-      template: 'example/index.ejs'
+      template: `${exampleDir}/index.ejs`
+      // template: path.resolve(__dirname, exampleDir, '/index.ejs')
     })
   ]
 };
