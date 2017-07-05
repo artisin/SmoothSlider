@@ -1,0 +1,104 @@
+{
+  "name": "SmoothSlider",
+  "version": "0.0.1",
+  "description": "A Minimal Preact Carousel Slider",
+  "license": "MIT",
+  "author": "te schultz",
+  "main": "component/",
+  "keywords": [
+    "carousel",
+    "carousel slider",
+    "ctr",
+    "preact",
+    "slider"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/artisin/SmoothSlider"
+  },
+  "bugs": {
+    "url": "https://github.com/artisin/SmoothSlider/issues"
+  },
+  "scripts": {
+    "clean": "rm -rf dist/*",
+    "commit": "git cz",
+    "deploy": "gh-pages -d example-build",
+    "dev": "yarn run clean && NODE_ENV=dev webpack -w",
+    "link": "yarn link && yarn link SmoothSlider",
+    "postinstall": "npm run link",
+    "prepublish": "yarn run link && yarn run test",
+    "release:major": "yarn run test && bumped release major",
+    "release:minor": "yarn run test && bumped release minor",
+    "release:patch": "yarn run test && bumped release patch",
+    "test": "jest --no-cache"
+  },
+  "dependencies": {
+    "object-get": "2.1.0",
+    "preact": "8.1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-jest": "^20.0.3",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "6.24.1",
+    "babel-plugin-transform-react-jsx": "6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-es2015": "6.24.1",
+    "browser-sync": "^2.18.12",
+    "browser-sync-webpack-plugin": "^1.2.0",
+    "bumped": "^0.10.4",
+    "bumped-changelog": "^0.3.10",
+    "bumped-terminal": "^0.7.3",
+    "chai": "4.0.2",
+    "commitizen": "^2.9.6",
+    "css-loader": "^0.28.4",
+    "ctr-loader": "0.2.1",
+    "cz-customizable-te": "^5.1.0",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "file-loader": "0.11.2",
+    "fs-extra": "3.0.1",
+    "gh-pages": "1.0.0",
+    "html-webpack-plugin": "2.29.0",
+    "image-webpack-loader": "3.3.1",
+    "jest": "^20.1.0-alpha.3",
+    "lodash": "4.17.4",
+    "mocha": "^3.4.2",
+    "object.entries": "1.0.4",
+    "preact-compat": "^3.15.0",
+    "preact-jsx-chai": "2.2.1",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.0.0",
+    "webpack-node-externals": "^1.6.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable-te"
+    },
+    "cz-customizable": {
+      "config": "./.cz-config.js"
+    }
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/file-mock.js",
+      "^react$": "preact-compat",
+      "^react-dom$": "preact-compat"
+    },
+    "verbose": true,
+    "transform": {
+      "^.+\\.jsx$": "babel-jest",
+      "^.+\\.js$": "babel-jest"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!SmoothSlider)"
+    ]
+  }
+}

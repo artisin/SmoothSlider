@@ -1,0 +1,230 @@
+$$:
+  ##############################################################################
+  # Slider's Main Colors that are all reffranced below,
+  # chagne one and you change them all
+  ##############################################################################
+  ###
+  # General Styles
+  baseColor:
+    black: 'rgba(0, 0, 0, 0.6)'
+    white: '#F0F0F0'
+    # default red/orange
+    accent: '#da6a6a'
+  ##############################################################################
+  # Slider's Parent Container Styles
+  ##############################################################################
+  ###
+  # General Styles
+  sliderSize:
+    position: relative
+    width: 1000px
+    height: 626px
+    # centers the slider inbetween the width
+    grid:
+      center: true
+    # under 800px
+    media--md:
+      width: 361px
+      height: 226px
+  ##############################################################################
+  # The Description Style
+  ##############################################################################
+  ###
+  # General size and position styles
+  descriptionStyles:
+    position: absolute
+    bottom: 1em
+    left: 1em
+    width: 40%
+    text-align: left
+    padding-left: 10px
+    padding-right: 10px
+    background: $baseColor.black$
+    # under 800px
+    media--md:
+      left: 1em
+      width: calc(100% - 20px - 2em)
+  ###
+  # Styles for h1 tag in the Description
+  descriptionH1Tag:
+    color: $baseColor.accent$
+    font-family: "'Bellefair', serif"
+    font-size: [responsive, 1.3em, 2em]
+    margin-top: 0.3em
+    margin-bottom: 0.1em
+  ###
+  # Styles for p tag in the Description
+  descriptionPTag:
+    color: $baseColor.accent$
+    font-family: "'Open Sans', sans-serif"
+    font-size: [responsive, 0.9em, 1em]
+    margin-bottom: 0.3em
+  ##############################################################################
+  # Indv Buttons Styles (the middle buttons)
+  ##############################################################################
+  ###
+  # parent styles that controlls the position and flex business
+  indvSliderParentStyles:
+    z-index: 1
+    cursor: pointer
+    bottom: -50px
+    position: absolute
+    width: 100%
+    display: flex
+    alignSelf: bottom
+    align-items: center
+    justify-content: center
+  ###
+  # indv general styles
+  indvSlideGeneralStyles:
+    height: 15px
+    max-width: 40px
+    margin-left: 0.5em
+    margin-right: 0.5em
+    z-index: 2
+    flex-basis: auto
+    flex-grow: 1
+    background: $baseColor.black$
+    # under 800px
+    media--md:
+      margin-left: 0.2em
+      margin-right: 0.2em
+    # on hover of an indv slide button style
+    hover-on:
+      option:
+        duration: 0.25s
+      background: $baseColor.accent$
+  ###
+  # Styles when a indv slide is selected
+  indvSlideOnSelected:
+    background: $baseColor.accent$
+  ##############################################################################
+  # Next/Prev Button Styles
+  ##############################################################################
+  ###
+  # the psudo content for the next/prev buttons
+  prevContent: ⇐
+  nextContent: ⇒
+  ###
+  # general styles for parent div for sizing and such
+  prevNextGeneralStyles:
+    size: 2em
+    line-height: 2em
+  ###
+  # styles for the psudo text, ie for next/prev content
+  prevNextTextStyles:
+    color: '#F0F0F0'
+    z-index: 1
+    font-size: 2em
+    # centers content
+    alignSelf: center
+  ###
+  # when user hovers over div
+  prevNextHoverStyles:
+    option:
+      duration: 0.25s
+    on:
+      background: '#da6a6a'
+    non:
+      background: $baseColor.black$
+
+
+
+
+
+
+
+
+
+
+
+
+################################################################################
+# Slider styles that uses the above variables
+################################################################################
+.smooth-slider:
+  merge: $sliderSize$
+  # slider components
+  #  -images = .smooth-slider-items
+  #  -text = .smooth-slider-title-desc
+  #  -nav = .smooth-slider-selectors
+  components:
+    # picture styles
+    .smooth-slider-items:
+      width: 100%
+      height: 100%
+      components:
+        .smooth-slider-slide:
+          position: absolute
+          height: 100%
+          transition:
+            opacity: 0
+          component-img:
+            height: 100%
+            width: 100%
+            object-fit: contain
+          component-.smooth-slider-slide-selected:
+            option:
+              appendKey: true
+            opacity: 1
+        # title and desc text
+        .smooth-slider-title-desc:
+          merge: $descriptionStyles$
+          # slider desc container transition
+          transition:
+            shorthand:
+              all: default
+          components:
+            # text dext transition
+            common:
+              transition:
+                shorthand:
+                  all: default
+            # both title & desc
+            h4:
+              merge: $descriptionH1Tag$
+            p:
+              merge: $descriptionPTag$
+              margin: 0
+    # bottom selectors to change slides, containter
+    .smooth-slider-selectors:
+      merge: $indvSliderParentStyles$
+      transition:
+        shorthand:
+          background: 0.3s
+      # Indv sider buttons
+      component-.smooth-slider-selector:
+        merge: $indvSlideGeneralStyles$
+        transition:
+          shorthand:
+            background: default
+        # sub components
+        components:
+          # if the selector is selected
+          .smooth-slider-selector-selected:
+            option:
+              appendKey: true
+            merge: $indvSlideOnSelected$
+          # Next/Prev Button Styles
+          .arrow:
+            option:
+              appendKey: true
+            background: transparent
+            position: relative
+            merge: $prevNextGeneralStyles$
+            first-child:
+              before:
+                content: $prevContent$
+            last-child:
+              before:
+                content: $nextContent$
+            # arrow default style
+            before:
+              merge: $prevNextTextStyles$
+            # arrow background
+            after:
+              content: false
+              position: [absolute, 0]
+              size: 100%
+              hover:
+                merge: $prevNextHoverStyles$
