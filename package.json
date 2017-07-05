@@ -1,5 +1,5 @@
 {
-  "name": "SmoothSlider",
+  "name": "smoothslider",
   "version": "0.1.0",
   "description": "A Minimal Preact Carousel Slider",
   "license": "MIT",
@@ -24,7 +24,7 @@
     "commit": "git cz",
     "deploy": "gh-pages -d example-build",
     "dev": "yarn run clean && NODE_ENV=dev webpack -w",
-    "link": "yarn link && yarn link SmoothSlider",
+    "link": "yarn link && yarn link smoothslider",
     "postinstall": "npm run link",
     "prepublish": "yarn run link && yarn run test",
     "release:major": "yarn run test && bumped release major",
@@ -98,7 +98,7 @@
       "node_modules"
     ],
     "transformIgnorePatterns": [
-      "node_modules/(?!SmoothSlider)"
+      "node_modules/(?!smoothslider)"
     ]
   }
 }
