@@ -1,0 +1,14 @@
+box: kkarczmarczyk/node-yarn
+build:
+  steps:
+    - script:
+      name: report yarn version
+      code: yarn --version
+    - script:
+      name: set yarn cache
+      code: |
+        export YARN_CACHE=$WERCKER_CACHE_DIR/yarn
+    # yarn runs prepublish test on deps install
+    - script:
+      name: install dependencies and test
+      code: yarn install
