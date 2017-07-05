@@ -1,7 +1,7 @@
 //base styles
 import styles from './base.ctr.js';
 import { h, render } from 'preact';
-import { SmoothSlider, SmoothSlide } from 'SmoothSlider';
+import { SmoothSlider, SmoothSlide } from 'smoothslider';
 
 //custom desciption styles other than background
 const customDescriptionStyles = {

@@ -1,7 +1,7 @@
 # SmoothSlider → A Preact Carousel Slider
 
-[![npm](https://img.shields.io/npm/l/SmoothSlider.svg)](https://github.com/artisin/SmoothSlider/blob/master/LICENSE.txt)
-[![npm](https://img.shields.io/npm/v/SmoothSlider.svg)](https://www.npmjs.com/package/SmoothSlider)
+[![npm](https://img.shields.io/npm/l/smoothslider.svg)](https://github.com/artisin/SmoothSlider/blob/master/LICENSE.txt)
+[![npm](https://img.shields.io/npm/v/smoothslider.svg)](https://www.npmjs.com/package/SmoothSlider)
 [![wercker status](https://app.wercker.com/status/a5cd2c460ebd46869b203308802dc50e/s/master "wercker status")](https://app.wercker.com/project/byKey/a5cd2c460ebd46869b203308802dc50e)
 [![David](https://img.shields.io/david/artisin/SmoothSlider.svg)](https://github.com/artisin/SmoothSlider/blob/master/package.json)
 
@@ -28,7 +28,7 @@ You can download and install the SmoothSlider component via npm of manually by c
 
 ```bash
    # npm install
-   yarn add SmoothSlider
+   yarn add smoothslider
 ```
 
 ```bash
@@ -62,7 +62,7 @@ __`SmoothSlide` Props__
 ```js
 // Import Preact and SmoothSlider, SmoothSlide assets
 import { h, render } from 'preact';
-import { SmoothSlider, SmoothSlide } from 'SmoothSlider';
+import { SmoothSlider, SmoothSlide } from 'smoothslider';
 //css assets (npm install)
 //import 'SmoothSlider/component/styles.css';
 

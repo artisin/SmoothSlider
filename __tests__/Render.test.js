@@ -1,7 +1,7 @@
 import { h, render } from 'preact';
 import chai, { expect, options } from 'chai';
 import assertJsx from 'preact-jsx-chai';
-import { SmoothSlider, SmoothSlide } from 'SmoothSlider';
+import { SmoothSlider, SmoothSlide } from 'smoothslider';
 
 // activate the JSX assertion extension:
 chai.use(assertJsx);
