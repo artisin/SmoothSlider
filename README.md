@@ -8,7 +8,7 @@ A simply smooth carousel slider for Preact for when you need a small 3kB alterna
 
 ## Project Setup
 
-You must configure and install Preact along with the jsx global pragma for babel to use SmoothSlider. Setting up both these assets is straight forward especially if you are familiar with React/Preact projects. If not, I recommend you give it a shot particularly if you're already using Babel. Check out Preact's setup documentation [here](https://preactjs.com/guide/getting-started) to get more information. 
+You must configure and install Preact along with the jsx global pragma for babel to use SmoothSlider. Setting up both these assets is straight forward especially if you are familiar with React/Preact projects. If not, I recommend you give it a shot particularly if you're already using Babel. Check out Preact's setup documentation [here](https://preactjs.com/guide/getting-started) to get more information.
 
 
 ## General Install
@@ -25,7 +25,7 @@ You can download and install the SmoothSlider component via npm of manually by c
    git clone https://github.com/artisin/SmoothSlider
 ```
 
-## JS Use
+## JavaScript Use
 
 SmoothSlider has two import components and you will have to import both of them. The first is `SmoothSlider`, this component is the slider container and logic that configures the buttons, interval time, click events, and the other logic needed to use the Slider. The second component is the `SmoothSlide` which handles the individual logic for each slide of the slider.
 
@@ -88,7 +88,7 @@ render(app, document.getElementById('app'));
 ```
 
 
-## CSS ([`ctr`](https://docs.ctr-lang.com)) use
+## CSS ([`ctr`](https://docs.ctr-lang.com)) Use
 
 If you like the default styles you can just copy/paste the CSS styles that are located inside the SmoothSlider directory into your project. If you wish to easly customize the CSS you can do so through the `styles.ctr.yml` file, but to do so you either have to set up the [`ctr-loader`](https://github.com/ctr-lang/ctr-loader) in your project via webpack. Or make your desired changes in by cloning this project and running the example. If you wish to do the latter just follow the below instructions.
 
